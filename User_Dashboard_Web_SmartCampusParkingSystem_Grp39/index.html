@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Login Dashboard</title>
+    <link rel="stylesheet" , href="./style.css" />
+    <script type="module" src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="homeContainer">
+      <h2>Welcome to ParkEase!</h2>
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showSignup()">Sign Up</button>
+    </div>
+
+    <div class="container hidden" id="loginContainer">
+      <h2>Login</h2>
+      <form class="form">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        />
+        <button type="button" onclick="login()">Login</button>
+      </form>
+    </div>
+
+    <div class="container hidden" id="signupContainer">
+      <h2>Sign Up</h2>
+      <form class="form">
+        <input type="email" id="signupEmail" placeholder="Email" required />
+        <input
+          type="password"
+          id="signupPassword"
+          placeholder="Password"
+          required
+        />
+        <button type="button" onclick="signup()">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="container-dashboard">
+        <div id="dashboardContainer" class="hidden">
+            <div class="navbar">
+            <div class="logo-container">
+                <img src="./images/logo.png" alt="ParkEase Logo" class="logo" />
+                <h2 id="heading">ParkEase: A Smart Parking System!</h2>
+            </div>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+      <div id="containerSlots" class="hidden">
+        <h2 id="slotCount">Number of slots available: </h2>
+        <div class="slots-container">
+          <div class="slot">1</div>
+          <div class="slot">2</div>
+          <div class="slot">3</div>
+          <div class="slot">4</div>
+        </div>
+        <button class="notify-btn" onclick="notifyUser()">Notify</button>
+        <h4 id="notifyMessage">🔥 Your Spot is Just a Click Away!<br> &nbsp &nbsp  &nbspHit Notify & Park Smart! 🏁🚗</h4>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+  position: relative; /* Needed for the pseudo-element */
+  overflow: hidden; /* Prevents scrolling issues */
+}
+
+/* Background overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/bg7.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.9; /* Adjust opacity here (0.0 to 1.0) */
+  z-index: -1; /* Places it behind all content */
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 95%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 8%;
+  margin-right: 40px;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+
+#heading {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.container-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  /* Prevents overlap with navbar */
+}
+
+
+#containerSlots {
+  margin-top: 150px; /* Increased margin to move it further down */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Centers vertically */
+  min-height: calc(100vh - 150px); /* Adjusts height to fit the screen properly */
+  text-align: center; /* Centers text */
+  padding-top: 20px;
+}
+
+.slots-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  justify-content: center; /* Centers the grid horizontally */
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border: 2px solid black;
+  font-weight: 800;
+}
+
+
+.notify-btn {
+  margin-top: 20px;
+  border: 2px solid black;
+  font-weight: 800;
+}
+
+#notifyMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  color: black; /* Highlight the message */
+  background-color: #fdfdfdad;
+  padding: 20px;
+}
+
+#slotCount {
+   /* Blue border to match theme */
+  background-color: #fdfdfdad;
+  color: red; /* Text color matches border */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 100px;
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  display: inline-block; /* Keeps width compact */
+  margin: 15px 0; /* Adds spacing around it */
+}
